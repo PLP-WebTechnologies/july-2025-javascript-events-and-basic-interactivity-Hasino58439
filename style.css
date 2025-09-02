@@ -1,9 +1,32 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
 }
 
-h1 {
-    color: darkblue;
+h1, h2 {
+  color: #333;
+}
+
+form {
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  width: 300px;
+}
+
+input, button {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
 }

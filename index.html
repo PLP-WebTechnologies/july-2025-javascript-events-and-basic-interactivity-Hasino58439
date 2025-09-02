@@ -1,21 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>My Assignment</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Hassan's Interactive Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="main-title">Welcome to My Page</h1>
-    <p id="info">This is a simple assignment project.</p>
-    
-    <button id="btn-change">Change Title</button>
-    <button id="btn-add">Add New Item</button>
-    <ul id="list">
-        <li>Item 1</li>
-        <li>Item 2</li>
-    </ul>
 
-    <script src="script.js"></script>
+  <h1>Hassan's Interactive Web Page</h1>
+
+  <!-- Form Section -->
+  <h2>Registration Form</h2>
+  <form id="myForm">
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+
+    <label>Email:</label>
+    <input type="text" id="email"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password">
+    <input type="checkbox" id="showPass"> Show Password<br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="formMessage"></p>
+
+  <!-- Counter Section -->
+  <h2>Click Counter</h2>
+  <button id="countBtn">Click Me</button>
+  <p>Count: <span id="count">0</span></p>
+
+  <script src="script.js"></script>
 </body>
 </html>

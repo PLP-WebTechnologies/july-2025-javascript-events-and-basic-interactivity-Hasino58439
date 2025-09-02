@@ -1,59 +1,35 @@
-// ======================
-// Part 1: Variables + Conditionals
-// ======================
-let age = 18;
-let name = "Hassan";
+// Hassan's Custom Form Validation
+document.getElementById("myForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // stop form submit
 
-if (age >= 18) {
-    console.log(name + " is an adult.");
-} else {
-    console.log(name + " is not an adult.");
-}
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = "";
 
-// ======================
-// Part 2: Custom Functions
-// ======================
-function greetUser(username) {
-    console.log("Hello " + username + "!");
-}
+  if (name === "") {
+    message = "Name is required";
+  } else if (email === "" || !email.includes("@")) {
+    message = "Valid email is required";
+  } else {
+    message = "Form submitted successfully!";
+  }
 
-function squareNumber(num) {
-    return num * num;
-}
-
-// Call functions
-greetUser("Hassan");
-console.log("Square of 4 is:", squareNumber(4));
-
-// ======================
-// Part 3: Loops
-// ======================
-// Example 1: For loop
-for (let i = 1; i <= 5; i++) {
-    console.log("For loop number:", i);
-}
-
-// Example 2: While loop
-let count = 0;
-while (count < 3) {
-    console.log("While loop count:", count);
-    count++;
-}
-
-// ======================
-// Part 4: DOM Interactions
-// ======================
-// 1. Change text content of an element
-document.getElementById("main-title").style.color = "red";
-
-// 2. Add event listener to button to change title
-document.getElementById("btn-change").addEventListener("click", function() {
-    document.getElementById("main-title").textContent = "Title Changed!";
+  document.getElementById("formMessage").textContent = message;
 });
 
-// 3. Add a new list item when button is clicked
-document.getElementById("btn-add").addEventListener("click", function() {
-    let newItem = document.createElement("li");
-    newItem.textContent = "New Item Added";
-    document.getElementById("list").appendChild(newItem);
+// Hassan's Show / Hide Password
+document.getElementById("showPass").addEventListener("change", function() {
+  let passField = document.getElementById("password");
+  if (this.checked) {
+    passField.type = "text"; // show password
+  } else {
+    passField.type = "password"; // hide password
+  }
+});
+
+// Hassan's Counter Feature
+let count = 0;
+document.getElementById("countBtn").addEventListener("click", function() {
+  count++;
+  document.getElementById("count").textContent = count;
 });
