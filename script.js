@@ -33,3 +33,4 @@ document.getElementById("countBtn").addEventListener("click", function() {
   count++;
   document.getElementById("count").textContent = count;
 });
+
