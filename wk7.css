@@ -1,0 +1,64 @@
+/* Hassan Ibrahim Suleiman - CSS3 Transitions & Animations */
+
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Part 1: Button hover effect */
+#hoverBtn {
+  padding: 10px 20px;
+  background: blue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.4s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+#hoverBtn:hover {
+  background: darkblue;
+  transform: scale(1.1); /* Grows smoothly */
+}
+
+/* Part 2 + 3: Box with animation */
+#box {
+  width: 100px;
+  height: 100px;
+  background: crimson;
+  margin: 20px auto;
+  border-radius: 10px;
+  transition: transform 1s ease; /* Smooth transform */
+}
+
+/* Keyframe for bouncing effect */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+
+.bounce {
+  animation: bounce 1s ease infinite; /* Reusable bounce */
+}
+
+/* Part 3: Popup animation */
+#popup {
+  position: fixed;
+  top: -200px; /* Hidden above screen */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: none; /* Hidden initially */
+  transition: top 0.5s ease, opacity 0.5s ease;
+}
+
+#popup.show {
+  display: block;
+  top: 100px; /* Slides down */
+  opacity: 1;
+}
